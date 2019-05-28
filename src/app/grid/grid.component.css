@@ -1,0 +1,14 @@
+mat-grid-tile {
+  background: #31bebd;
+  /*font-family: "Muli", sans-serif;  */
+}
+
+#statustext {
+	/*font-family: 'Muli', sans-serif;*/
+	font-weight: bold;
+	padding: 30px;
+}
+
+#checkwin {
+	/*font-family: 'Muli', sans-serif;*/
+}

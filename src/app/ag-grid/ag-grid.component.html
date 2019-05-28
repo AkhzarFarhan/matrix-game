@@ -1,0 +1,26 @@
+<!-- <ag-grid-angular 
+    style="width: 500px; height: 500px;" 
+    class="ag-theme-balham"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular> -->
+
+<div class="main_wrap">
+	<div class="puzzle_wrap">
+		<div class="tile" *ngFor="let tile of mainPuzzle; let i=index" (click)="someFunc(i)">{{tile.data}}</div>
+	</div>
+</div>
+
+
+<div align="center" id="statustext" *ngIf="!first">
+	<div *ngIf="status">Won</div>
+	<div *ngIf="!status">Lost</div>
+</div>
+
+<div align="center" *ngIf="alert">Illegal Move</div>
+<div align="center" *ngIf="!alert"></div>
+
+<div class="btn">
+	<button (click)="reset()">Reset</button>
+</div>

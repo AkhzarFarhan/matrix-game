@@ -1,0 +1,26 @@
+<!-- {{tiles}} -->
+
+
+<mat-grid-list cols="3" rowHeight="10:1">
+  <mat-grid-tile
+  	*ngFor="let tile of tiles"
+     [colspan]="tile.col"
+     [rowspan]="tile.row">
+     {{tile.val}}
+     <!-- <input #box> -->
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <mat-grid-list>
+	<mat-grid-tile
+		*ngFor="let tile2 of tiles2">
+		{{tile2.val}}
+	</mat-grid-tile>
+</mat-grid-list> -->
+
+<!-- <button (click)="sendData($event)" id="checkwin" align="center">Check</button> -->
+
+<div align="center" id="statustext">
+	<div *ngIf="status">Won</div>
+	<div *ngIf="!status">Lost</div>
+</div>

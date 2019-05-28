@@ -1,0 +1,46 @@
+.puzzle_wrap {
+
+    width: 300px;
+    height: 300px;
+    /*background-color: #333;*/
+    color: black;
+    display: flex;
+    width: 1;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.tile {
+
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3cc47a;
+    border-radius: 50px;
+    border-color: black;
+    border-width: 5px;
+}
+.main_wrap {
+	align-self: center;
+}
+.btn {
+	padding: 30px;
+	text-align: center;
+}
+
+
+/*.title {
+	align-self: center;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;	
+}*/
+
+/*.main_wrap {
+	align-self: center;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;	
+}*/
