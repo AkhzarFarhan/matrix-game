@@ -8,6 +8,7 @@
     width: 1;
     flex-wrap: wrap;
     margin: 0 auto;
+    font-size: 30px;
 
 }
 
@@ -21,6 +22,7 @@
     border-radius: 50px;
     border-color: black;
     border-width: 5px;
+    font-family: 'Muli', sans-serif;
 }
 .main_wrap {
 	align-self: center;
@@ -29,7 +31,13 @@
 	padding: 30px;
 	text-align: center;
 }
-
+.button {
+	padding: 15px;
+	color: #3cc47a;
+	background-color: black;
+	border-radius: 8px;
+	font-size: 17px;
+}
 
 /*.title {
 	align-self: center;

@@ -6,71 +6,49 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ag-grid.component.css']
 })
 export class AgGridComponent implements OnInit {
-
-	// private columnDefs;
-	// private rowData;
-	// private columnTypes;
-	// private gridApi;
-	// private gridColumnApi;
-	private status;
-	// private position;
-	private first = true;
-	private alert = false;
-	private moved = false;
+	public status;
+	public first = true;
+	public alert = false;
+	public moved = false;
 
 	mainPuzzle:any = [
 		{
-			data: 1,
+			data: 6,
 			pos: 0
 		},
 		{
-			data: 2,
+			data: 5,
 			pos: 1
 		},
 		{
-			data: 3,
+			data: 7,
 			pos: 2
 		},
 		{
-			data: 4,
+			data: 3,
 			pos: 3
 		},
 		{
-			data: 5,
+			data: 8,
 			pos: 4
 		},
 		{
-			data: 6,
+			data: 4,
 			pos: 5
 		},
 		{
-			data: 7,
+			data: 2,
 			pos: 6
 		},
 		{
-			data: 8,
+			data: 'X',
 			pos: 7
 		},
 		{
-			data: 'x',
+			data: 1,
 			pos: 8
 		}
 	];
-
-	// sPuzzle = this.mainPuzzle;
-
- //  constructor() {
-	//  this.columnDefs = [
- //        {headerName: 'A', field: 'a', editable: true },
- //        {headerName: 'B', field: 'b', editable: true },
- //        {headerName: 'C', field: 'c', editable: true }
- //    ];    
-
- //    this.rowData = this.getRowData();
- //    // console.log(this.rowData);
- //    // this.status =  this.wincheck(this.rowData);
- //  } 
-
   ngOnInit() {
   }
 
@@ -116,14 +94,14 @@ export class AgGridComponent implements OnInit {
 
 		this.mainPuzzle.forEach((tile:any)=>{
 
-		if(tile.data == 'x'){
+		if(tile.data == 'X'){
 			let position = tile.pos;
 
 			for (var i=0; i<possileMove[0].length; i++){
 				this.moved = false;
 				this.alert = false;
 
-				if(possileMove[0][i] == position){
+				if(possileMove[0][i] == position) {
 
 					console.log(this.mainPuzzle[index]);
 					let tempData = this.mainPuzzle[index].data;
@@ -132,19 +110,10 @@ export class AgGridComponent implements OnInit {
 					this.first = false;
 					this.moved = true;
 					flag = true;
-					// this.alert = false;
-					// this.alert = false;
-
-
 					break;					
 				}
-				// else{
-				// 	if(i == possileMove[0].length -1){
-				// 	this.moved = false;
-				// }
-				// }
 			}
-			}
+		}
 
 	})
 			if (this.moved == false && flag != true){
@@ -157,20 +126,6 @@ export class AgGridComponent implements OnInit {
 		this.status = this.wincheck(this.mainPuzzle);
 		console.log("moved: ", this.moved, "alert: ", this.alert, "flag: ", flag);
 }
-
-// 	getRowData = () =>{
-// 	  var rowData = [];
-// 	  for (var i = 1; i <=7 ; i+=3) {
-// 	    rowData.push({
-// 	    	a: (i),
-// 	    	b: (i+1),
-// 	    	c: (i+2)
-// 	    });
-// 	  }
-// 	  rowData[2].c = 'X';
-// 	  return rowData;
-// }
-
 	 wincheck = (tiles) =>{
 		let win =  false;
 		var count = 0;
@@ -185,7 +140,7 @@ export class AgGridComponent implements OnInit {
 			win =  true;
 		}
 		return win;
-}
+	}
 }
 
 	 
